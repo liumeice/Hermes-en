@@ -1,6 +1,6 @@
 # Hermes-en
 
-Scrape the [Hermes Agent documentation](https://hermes-agent.nousresearch.com/docs/) and produce a single merged PDF (`Output/HermesAgent-docs.pdf`) with full bookmark/TOC structure.
+Scrape the [Hermes Agent English documentation](https://hermes-agent.nousresearch.com/docs/) and produce a single merged PDF (`Output/HermesAgent-docs.pdf`) with full bookmark/TOC structure.
 
 ## Pipeline
 
@@ -30,10 +30,10 @@ Step 2 skips already-generated PDFs (checks file existence + non-zero size), so 
 
 ```bash
 # Create virtual environment
-python -m venv venv
-venv\Scripts\activate.bat      # Windows CMD
+python -m venv .venv
+.venv\Scripts\activate.bat      # Windows CMD
 # or
-source venv/Scripts/activate   # Git Bash / POSIX
+source .venv/Scripts/activate   # Git Bash / POSIX
 
 # Install dependencies
 pip install -r requirements.txt
@@ -45,8 +45,9 @@ python -m playwright install chromium
 ## Dependencies
 
 - **Python 3.12+**
-- **playwright** 1.60.0 — headless Chromium for scraping and PDF export
-- **PyMuPDF** (fitz) 1.27.2.3 — PDF merging and bookmark generation
+- **playwright** — headless Chromium for scraping and PDF export
+- **PyMuPDF** (fitz) — PDF merging and bookmark generation
+- **reportlab** — cover page PDF generation
 
 ## Output
 
