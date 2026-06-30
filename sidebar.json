@@ -1,0 +1,2161 @@
+{
+  "source": "https://hermes-agent.nousresearch.com/docs/",
+  "root": "Hermes Agent Documentation",
+  "total_pages": 344,
+  "children": [
+    {
+      "title": "Hermes Agent Documentation",
+      "href": "/docs/",
+      "level": 1
+    },
+    {
+      "title": "User Stories & Use Cases",
+      "href": "/docs/user-stories",
+      "level": 1
+    },
+    {
+      "title": "Getting Started",
+      "href": "#",
+      "level": 1,
+      "children": [
+        {
+          "title": "Quickstart",
+          "href": "/docs/getting-started/quickstart",
+          "level": 2
+        },
+        {
+          "title": "Installation",
+          "href": "/docs/getting-started/installation",
+          "level": 2
+        },
+        {
+          "title": "Platform Support",
+          "href": "/docs/getting-started/platform-support",
+          "level": 2
+        },
+        {
+          "title": "Android / Termux",
+          "href": "/docs/getting-started/termux",
+          "level": 2
+        },
+        {
+          "title": "Nix & NixOS Setup",
+          "href": "/docs/getting-started/nix-setup",
+          "level": 2
+        },
+        {
+          "title": "Updating & Uninstalling",
+          "href": "/docs/getting-started/updating",
+          "level": 2
+        },
+        {
+          "title": "Learning Path",
+          "href": "/docs/getting-started/learning-path",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "title": "Using Hermes",
+      "href": "#",
+      "level": 1,
+      "children": [
+        {
+          "title": "CLI Interface",
+          "href": "/docs/user-guide/cli",
+          "level": 2
+        },
+        {
+          "title": "TUI",
+          "href": "/docs/user-guide/tui",
+          "level": 2
+        },
+        {
+          "title": "Desktop App",
+          "href": "/docs/user-guide/desktop",
+          "level": 2
+        },
+        {
+          "title": "Windows (Native)",
+          "href": "/docs/user-guide/windows-native",
+          "level": 2
+        },
+        {
+          "title": "Windows (WSL2)",
+          "href": "/docs/user-guide/windows-wsl-quickstart",
+          "level": 2
+        },
+        {
+          "title": "Configuration",
+          "href": "/docs/user-guide/configuration",
+          "level": 2
+        },
+        {
+          "title": "Managed Scope",
+          "href": "/docs/user-guide/managed-scope",
+          "level": 2
+        },
+        {
+          "title": "Configuring Models",
+          "href": "/docs/user-guide/configuring-models",
+          "level": 2
+        },
+        {
+          "title": "Secrets",
+          "href": "#",
+          "level": 2,
+          "children": [
+            {
+              "title": "Secrets",
+              "href": "/docs/user-guide/secrets/",
+              "level": 3
+            },
+            {
+              "title": "Bitwarden Secrets Manager",
+              "href": "/docs/user-guide/secrets/bitwarden",
+              "level": 3
+            }
+          ]
+        },
+        {
+          "title": "Sessions",
+          "href": "/docs/user-guide/sessions",
+          "level": 2
+        },
+        {
+          "title": "Profiles: Running Multiple Agents",
+          "href": "/docs/user-guide/profiles",
+          "level": 2
+        },
+        {
+          "title": "Profile Distributions: Share a Whole Agent",
+          "href": "/docs/user-guide/profile-distributions",
+          "level": 2
+        },
+        {
+          "title": "Running Many Gateways at Once",
+          "href": "/docs/user-guide/multi-profile-gateways",
+          "level": 2
+        },
+        {
+          "title": "Git Worktrees",
+          "href": "/docs/user-guide/git-worktrees",
+          "level": 2
+        },
+        {
+          "title": "Docker",
+          "href": "/docs/user-guide/docker",
+          "level": 2
+        },
+        {
+          "title": "Security",
+          "href": "/docs/user-guide/security",
+          "level": 2
+        },
+        {
+          "title": "Checkpoints & Rollback",
+          "href": "/docs/user-guide/checkpoints-and-rollback",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "title": "Features",
+      "href": "#",
+      "level": 1,
+      "children": [
+        {
+          "title": "Overview",
+          "href": "/docs/user-guide/features/overview",
+          "level": 2
+        },
+        {
+          "title": "Tool Gateway",
+          "href": "/docs/user-guide/features/tool-gateway",
+          "level": 2
+        },
+        {
+          "title": "Core",
+          "href": "#",
+          "level": 2,
+          "children": [
+            {
+              "title": "Tools & Toolsets",
+              "href": "/docs/user-guide/features/tools",
+              "level": 3
+            },
+            {
+              "title": "Tool Search",
+              "href": "/docs/user-guide/features/tool-search",
+              "level": 3
+            },
+            {
+              "title": "Skills System",
+              "href": "/docs/user-guide/features/skills",
+              "level": 3
+            },
+            {
+              "title": "LSP — Semantic Diagnostics",
+              "href": "/docs/user-guide/features/lsp",
+              "level": 3
+            },
+            {
+              "title": "Curator",
+              "href": "/docs/user-guide/features/curator",
+              "level": 3
+            },
+            {
+              "title": "Persistent Memory",
+              "href": "/docs/user-guide/features/memory",
+              "level": 3
+            },
+            {
+              "title": "Memory Providers",
+              "href": "/docs/user-guide/features/memory-providers",
+              "level": 3
+            },
+            {
+              "title": "Honcho Memory",
+              "href": "/docs/user-guide/features/honcho",
+              "level": 3
+            },
+            {
+              "title": "Context Files",
+              "href": "/docs/user-guide/features/context-files",
+              "level": 3
+            },
+            {
+              "title": "Context References",
+              "href": "/docs/user-guide/features/context-references",
+              "level": 3
+            },
+            {
+              "title": "Mixture of Agents",
+              "href": "/docs/user-guide/features/mixture-of-agents",
+              "level": 3
+            },
+            {
+              "title": "Personality & SOUL.md",
+              "href": "/docs/user-guide/features/personality",
+              "level": 3
+            },
+            {
+              "title": "Skins & Themes",
+              "href": "/docs/user-guide/features/skins",
+              "level": 3
+            },
+            {
+              "title": "Plugins",
+              "href": "/docs/user-guide/features/plugins",
+              "level": 3
+            },
+            {
+              "title": "Built-in Plugins",
+              "href": "/docs/user-guide/features/built-in-plugins",
+              "level": 3
+            }
+          ]
+        },
+        {
+          "title": "Automation",
+          "href": "#",
+          "level": 2,
+          "children": [
+            {
+              "title": "Scheduled Tasks (Cron)",
+              "href": "/docs/user-guide/features/cron",
+              "level": 3
+            },
+            {
+              "title": "Automation Blueprints Catalog",
+              "href": "/docs/reference/automation-blueprints-catalog",
+              "level": 3
+            },
+            {
+              "title": "Subagent Delegation",
+              "href": "/docs/user-guide/features/delegation",
+              "level": 3
+            },
+            {
+              "title": "Kanban (Multi-Agent Board)",
+              "href": "/docs/user-guide/features/kanban",
+              "level": 3
+            },
+            {
+              "title": "Codex App-Server Runtime",
+              "href": "/docs/user-guide/features/codex-app-server-runtime",
+              "level": 3
+            },
+            {
+              "title": "Kanban tutorial",
+              "href": "/docs/user-guide/features/kanban-tutorial",
+              "level": 3
+            },
+            {
+              "title": "Kanban worker lanes",
+              "href": "/docs/user-guide/features/kanban-worker-lanes",
+              "level": 3
+            },
+            {
+              "title": "Persistent Goals",
+              "href": "/docs/user-guide/features/goals",
+              "level": 3
+            },
+            {
+              "title": "Code Execution",
+              "href": "/docs/user-guide/features/code-execution",
+              "level": 3
+            },
+            {
+              "title": "Event Hooks",
+              "href": "/docs/user-guide/features/hooks",
+              "level": 3
+            },
+            {
+              "title": "Batch Processing",
+              "href": "/docs/user-guide/features/batch-processing",
+              "level": 3
+            }
+          ]
+        },
+        {
+          "title": "Media & Web",
+          "href": "#",
+          "level": 2,
+          "children": [
+            {
+              "title": "Voice Mode",
+              "href": "/docs/user-guide/features/voice-mode",
+              "level": 3
+            },
+            {
+              "title": "Web Search",
+              "href": "/docs/user-guide/features/web-search",
+              "level": 3
+            },
+            {
+              "title": "X (Twitter) Search",
+              "href": "/docs/user-guide/features/x-search",
+              "level": 3
+            },
+            {
+              "title": "Browser",
+              "href": "/docs/user-guide/features/browser",
+              "level": 3
+            },
+            {
+              "title": "Computer Use",
+              "href": "/docs/user-guide/features/computer-use",
+              "level": 3
+            },
+            {
+              "title": "Vision & Image Paste",
+              "href": "/docs/user-guide/features/vision",
+              "level": 3
+            },
+            {
+              "title": "Image Generation",
+              "href": "/docs/user-guide/features/image-generation",
+              "level": 3
+            },
+            {
+              "title": "Spotify",
+              "href": "/docs/user-guide/features/spotify",
+              "level": 3
+            },
+            {
+              "title": "Pets (Petdex Mascots)",
+              "href": "/docs/user-guide/features/pets",
+              "level": 3
+            },
+            {
+              "title": "Voice & TTS",
+              "href": "/docs/user-guide/features/tts",
+              "level": 3
+            },
+            {
+              "title": "Deliverable Mode",
+              "href": "/docs/user-guide/features/deliverable-mode",
+              "level": 3
+            }
+          ]
+        },
+        {
+          "title": "Management",
+          "href": "#",
+          "level": 2,
+          "children": [
+            {
+              "title": "Web Dashboard",
+              "href": "/docs/user-guide/features/web-dashboard",
+              "level": 3
+            },
+            {
+              "title": "Extending the Dashboard",
+              "href": "/docs/user-guide/features/extending-the-dashboard",
+              "level": 3
+            },
+            {
+              "title": "API Server",
+              "href": "/docs/user-guide/features/api-server",
+              "level": 3
+            },
+            {
+              "title": "Subscription Proxy",
+              "href": "/docs/user-guide/features/subscription-proxy",
+              "level": 3
+            }
+          ]
+        },
+        {
+          "title": "Skills",
+          "href": "#",
+          "level": 2,
+          "children": [
+            {
+              "title": "Bundled Skills Catalog",
+              "href": "/docs/reference/skills-catalog",
+              "level": 3
+            },
+            {
+              "title": "Optional Skills Catalog",
+              "href": "/docs/reference/optional-skills-catalog",
+              "level": 3
+            },
+            {
+              "title": "Bundled",
+              "href": "#",
+              "level": 3,
+              "children": [
+                {
+                  "title": "apple",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "Apple Notes",
+                      "href": "/docs/user-guide/skills/bundled/apple/apple-apple-notes",
+                      "level": 5
+                    },
+                    {
+                      "title": "Apple Reminders",
+                      "href": "/docs/user-guide/skills/bundled/apple/apple-apple-reminders",
+                      "level": 5
+                    },
+                    {
+                      "title": "Findmy",
+                      "href": "/docs/user-guide/skills/bundled/apple/apple-findmy",
+                      "level": 5
+                    },
+                    {
+                      "title": "Imessage",
+                      "href": "/docs/user-guide/skills/bundled/apple/apple-imessage",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "autonomous-ai-agents",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "Claude Code",
+                      "href": "/docs/user-guide/skills/bundled/autonomous-ai-agents/autonomous-ai-agents-claude-code",
+                      "level": 5
+                    },
+                    {
+                      "title": "Codex",
+                      "href": "/docs/user-guide/skills/bundled/autonomous-ai-agents/autonomous-ai-agents-codex",
+                      "level": 5
+                    },
+                    {
+                      "title": "Hermes Agent",
+                      "href": "/docs/user-guide/skills/bundled/autonomous-ai-agents/autonomous-ai-agents-hermes-agent",
+                      "level": 5
+                    },
+                    {
+                      "title": "Opencode",
+                      "href": "/docs/user-guide/skills/bundled/autonomous-ai-agents/autonomous-ai-agents-opencode",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "computer-use",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "Computer Use",
+                      "href": "/docs/user-guide/skills/bundled/computer-use/computer-use-computer-use",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "creative",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "Architecture Diagram",
+                      "href": "/docs/user-guide/skills/bundled/creative/creative-architecture-diagram",
+                      "level": 5
+                    },
+                    {
+                      "title": "Ascii Art",
+                      "href": "/docs/user-guide/skills/bundled/creative/creative-ascii-art",
+                      "level": 5
+                    },
+                    {
+                      "title": "Ascii Video",
+                      "href": "/docs/user-guide/skills/bundled/creative/creative-ascii-video",
+                      "level": 5
+                    },
+                    {
+                      "title": "Baoyu Infographic",
+                      "href": "/docs/user-guide/skills/bundled/creative/creative-baoyu-infographic",
+                      "level": 5
+                    },
+                    {
+                      "title": "Claude Design",
+                      "href": "/docs/user-guide/skills/bundled/creative/creative-claude-design",
+                      "level": 5
+                    },
+                    {
+                      "title": "Comfyui",
+                      "href": "/docs/user-guide/skills/bundled/creative/creative-comfyui",
+                      "level": 5
+                    },
+                    {
+                      "title": "Design Md",
+                      "href": "/docs/user-guide/skills/bundled/creative/creative-design-md",
+                      "level": 5
+                    },
+                    {
+                      "title": "Excalidraw",
+                      "href": "/docs/user-guide/skills/bundled/creative/creative-excalidraw",
+                      "level": 5
+                    },
+                    {
+                      "title": "Humanizer",
+                      "href": "/docs/user-guide/skills/bundled/creative/creative-humanizer",
+                      "level": 5
+                    },
+                    {
+                      "title": "Manim Video",
+                      "href": "/docs/user-guide/skills/bundled/creative/creative-manim-video",
+                      "level": 5
+                    },
+                    {
+                      "title": "P5Js",
+                      "href": "/docs/user-guide/skills/bundled/creative/creative-p5js",
+                      "level": 5
+                    },
+                    {
+                      "title": "Popular Web Designs",
+                      "href": "/docs/user-guide/skills/bundled/creative/creative-popular-web-designs",
+                      "level": 5
+                    },
+                    {
+                      "title": "Pretext",
+                      "href": "/docs/user-guide/skills/bundled/creative/creative-pretext",
+                      "level": 5
+                    },
+                    {
+                      "title": "Sketch",
+                      "href": "/docs/user-guide/skills/bundled/creative/creative-sketch",
+                      "level": 5
+                    },
+                    {
+                      "title": "Songwriting And Ai Music",
+                      "href": "/docs/user-guide/skills/bundled/creative/creative-songwriting-and-ai-music",
+                      "level": 5
+                    },
+                    {
+                      "title": "Touchdesigner Mcp",
+                      "href": "/docs/user-guide/skills/bundled/creative/creative-touchdesigner-mcp",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "data-science",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "Jupyter Live Kernel",
+                      "href": "/docs/user-guide/skills/bundled/data-science/data-science-jupyter-live-kernel",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "dogfood",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "Dogfood",
+                      "href": "/docs/user-guide/skills/bundled/dogfood/dogfood-dogfood",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "email",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "Himalaya",
+                      "href": "/docs/user-guide/skills/bundled/email/email-himalaya",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "github",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "Codebase Inspection",
+                      "href": "/docs/user-guide/skills/bundled/github/github-codebase-inspection",
+                      "level": 5
+                    },
+                    {
+                      "title": "Github Auth",
+                      "href": "/docs/user-guide/skills/bundled/github/github-github-auth",
+                      "level": 5
+                    },
+                    {
+                      "title": "Github Code Review",
+                      "href": "/docs/user-guide/skills/bundled/github/github-github-code-review",
+                      "level": 5
+                    },
+                    {
+                      "title": "Github Issues",
+                      "href": "/docs/user-guide/skills/bundled/github/github-github-issues",
+                      "level": 5
+                    },
+                    {
+                      "title": "Github Pr Workflow",
+                      "href": "/docs/user-guide/skills/bundled/github/github-github-pr-workflow",
+                      "level": 5
+                    },
+                    {
+                      "title": "Github Repo Management",
+                      "href": "/docs/user-guide/skills/bundled/github/github-github-repo-management",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "media",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "Gif Search",
+                      "href": "/docs/user-guide/skills/bundled/media/media-gif-search",
+                      "level": 5
+                    },
+                    {
+                      "title": "Heartmula",
+                      "href": "/docs/user-guide/skills/bundled/media/media-heartmula",
+                      "level": 5
+                    },
+                    {
+                      "title": "Songsee",
+                      "href": "/docs/user-guide/skills/bundled/media/media-songsee",
+                      "level": 5
+                    },
+                    {
+                      "title": "Youtube Content",
+                      "href": "/docs/user-guide/skills/bundled/media/media-youtube-content",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "mlops",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "Audiocraft Audio Generation",
+                      "href": "/docs/user-guide/skills/bundled/mlops/mlops-models-audiocraft",
+                      "level": 5
+                    },
+                    {
+                      "title": "Huggingface Hub",
+                      "href": "/docs/user-guide/skills/bundled/mlops/mlops-huggingface-hub",
+                      "level": 5
+                    },
+                    {
+                      "title": "Llama Cpp",
+                      "href": "/docs/user-guide/skills/bundled/mlops/mlops-inference-llama-cpp",
+                      "level": 5
+                    },
+                    {
+                      "title": "Evaluating Llms Harness",
+                      "href": "/docs/user-guide/skills/bundled/mlops/mlops-evaluation-lm-evaluation-harness",
+                      "level": 5
+                    },
+                    {
+                      "title": "Segment Anything Model",
+                      "href": "/docs/user-guide/skills/bundled/mlops/mlops-models-segment-anything",
+                      "level": 5
+                    },
+                    {
+                      "title": "Serving Llms Vllm",
+                      "href": "/docs/user-guide/skills/bundled/mlops/mlops-inference-vllm",
+                      "level": 5
+                    },
+                    {
+                      "title": "Weights And Biases",
+                      "href": "/docs/user-guide/skills/bundled/mlops/mlops-evaluation-weights-and-biases",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "note-taking",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "Obsidian",
+                      "href": "/docs/user-guide/skills/bundled/note-taking/note-taking-obsidian",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "productivity",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "Airtable",
+                      "href": "/docs/user-guide/skills/bundled/productivity/productivity-airtable",
+                      "level": 5
+                    },
+                    {
+                      "title": "Google Workspace",
+                      "href": "/docs/user-guide/skills/bundled/productivity/productivity-google-workspace",
+                      "level": 5
+                    },
+                    {
+                      "title": "Maps",
+                      "href": "/docs/user-guide/skills/bundled/productivity/productivity-maps",
+                      "level": 5
+                    },
+                    {
+                      "title": "Nano Pdf",
+                      "href": "/docs/user-guide/skills/bundled/productivity/productivity-nano-pdf",
+                      "level": 5
+                    },
+                    {
+                      "title": "Notion",
+                      "href": "/docs/user-guide/skills/bundled/productivity/productivity-notion",
+                      "level": 5
+                    },
+                    {
+                      "title": "Ocr And Documents",
+                      "href": "/docs/user-guide/skills/bundled/productivity/productivity-ocr-and-documents",
+                      "level": 5
+                    },
+                    {
+                      "title": "Petdex",
+                      "href": "/docs/user-guide/skills/bundled/productivity/productivity-petdex",
+                      "level": 5
+                    },
+                    {
+                      "title": "Powerpoint",
+                      "href": "/docs/user-guide/skills/bundled/productivity/productivity-powerpoint",
+                      "level": 5
+                    },
+                    {
+                      "title": "Teams Meeting Pipeline",
+                      "href": "/docs/user-guide/skills/bundled/productivity/productivity-teams-meeting-pipeline",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "research",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "Arxiv",
+                      "href": "/docs/user-guide/skills/bundled/research/research-arxiv",
+                      "level": 5
+                    },
+                    {
+                      "title": "Blogwatcher",
+                      "href": "/docs/user-guide/skills/bundled/research/research-blogwatcher",
+                      "level": 5
+                    },
+                    {
+                      "title": "Llm Wiki",
+                      "href": "/docs/user-guide/skills/bundled/research/research-llm-wiki",
+                      "level": 5
+                    },
+                    {
+                      "title": "Polymarket",
+                      "href": "/docs/user-guide/skills/bundled/research/research-polymarket",
+                      "level": 5
+                    },
+                    {
+                      "title": "Research Paper Writing",
+                      "href": "/docs/user-guide/skills/bundled/research/research-research-paper-writing",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "smart-home",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "Openhue",
+                      "href": "/docs/user-guide/skills/bundled/smart-home/smart-home-openhue",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "social-media",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "Xurl",
+                      "href": "/docs/user-guide/skills/bundled/social-media/social-media-xurl",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "software-development",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "Hermes Agent Skill Authoring",
+                      "href": "/docs/user-guide/skills/bundled/software-development/software-development-hermes-agent-skill-authoring",
+                      "level": 5
+                    },
+                    {
+                      "title": "Node Inspect Debugger",
+                      "href": "/docs/user-guide/skills/bundled/software-development/software-development-node-inspect-debugger",
+                      "level": 5
+                    },
+                    {
+                      "title": "Plan",
+                      "href": "/docs/user-guide/skills/bundled/software-development/software-development-plan",
+                      "level": 5
+                    },
+                    {
+                      "title": "Python Debugpy",
+                      "href": "/docs/user-guide/skills/bundled/software-development/software-development-python-debugpy",
+                      "level": 5
+                    },
+                    {
+                      "title": "Requesting Code Review",
+                      "href": "/docs/user-guide/skills/bundled/software-development/software-development-requesting-code-review",
+                      "level": 5
+                    },
+                    {
+                      "title": "Simplify Code",
+                      "href": "/docs/user-guide/skills/bundled/software-development/software-development-simplify-code",
+                      "level": 5
+                    },
+                    {
+                      "title": "Spike",
+                      "href": "/docs/user-guide/skills/bundled/software-development/software-development-spike",
+                      "level": 5
+                    },
+                    {
+                      "title": "Systematic Debugging",
+                      "href": "/docs/user-guide/skills/bundled/software-development/software-development-systematic-debugging",
+                      "level": 5
+                    },
+                    {
+                      "title": "Test Driven Development",
+                      "href": "/docs/user-guide/skills/bundled/software-development/software-development-test-driven-development",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "yuanbao",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "Yuanbao",
+                      "href": "/docs/user-guide/skills/bundled/yuanbao/yuanbao-yuanbao",
+                      "level": 5
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Optional",
+              "href": "#",
+              "level": 3,
+              "children": [
+                {
+                  "title": "autonomous-ai-agents",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "Antigravity Cli",
+                      "href": "/docs/user-guide/skills/optional/autonomous-ai-agents/autonomous-ai-agents-antigravity-cli",
+                      "level": 5
+                    },
+                    {
+                      "title": "Blackbox",
+                      "href": "/docs/user-guide/skills/optional/autonomous-ai-agents/autonomous-ai-agents-blackbox",
+                      "level": 5
+                    },
+                    {
+                      "title": "Grok",
+                      "href": "/docs/user-guide/skills/optional/autonomous-ai-agents/autonomous-ai-agents-grok",
+                      "level": 5
+                    },
+                    {
+                      "title": "Honcho",
+                      "href": "/docs/user-guide/skills/optional/autonomous-ai-agents/autonomous-ai-agents-honcho",
+                      "level": 5
+                    },
+                    {
+                      "title": "Openhands",
+                      "href": "/docs/user-guide/skills/optional/autonomous-ai-agents/autonomous-ai-agents-openhands",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "blockchain",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "Evm",
+                      "href": "/docs/user-guide/skills/optional/blockchain/blockchain-evm",
+                      "level": 5
+                    },
+                    {
+                      "title": "Hyperliquid",
+                      "href": "/docs/user-guide/skills/optional/blockchain/blockchain-hyperliquid",
+                      "level": 5
+                    },
+                    {
+                      "title": "Solana",
+                      "href": "/docs/user-guide/skills/optional/blockchain/blockchain-solana",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "communication",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "One Three One Rule",
+                      "href": "/docs/user-guide/skills/optional/communication/communication-one-three-one-rule",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "creative",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "Baoyu Article Illustrator",
+                      "href": "/docs/user-guide/skills/optional/creative/creative-baoyu-article-illustrator",
+                      "level": 5
+                    },
+                    {
+                      "title": "Baoyu Comic",
+                      "href": "/docs/user-guide/skills/optional/creative/creative-baoyu-comic",
+                      "level": 5
+                    },
+                    {
+                      "title": "Blender Mcp",
+                      "href": "/docs/user-guide/skills/optional/creative/creative-blender-mcp",
+                      "level": 5
+                    },
+                    {
+                      "title": "Concept Diagrams",
+                      "href": "/docs/user-guide/skills/optional/creative/creative-concept-diagrams",
+                      "level": 5
+                    },
+                    {
+                      "title": "Creative Ideation",
+                      "href": "/docs/user-guide/skills/optional/creative/creative-creative-ideation",
+                      "level": 5
+                    },
+                    {
+                      "title": "Hyperframes",
+                      "href": "/docs/user-guide/skills/optional/creative/creative-hyperframes",
+                      "level": 5
+                    },
+                    {
+                      "title": "Kanban Video Orchestrator",
+                      "href": "/docs/user-guide/skills/optional/creative/creative-kanban-video-orchestrator",
+                      "level": 5
+                    },
+                    {
+                      "title": "Meme Generation",
+                      "href": "/docs/user-guide/skills/optional/creative/creative-meme-generation",
+                      "level": 5
+                    },
+                    {
+                      "title": "Pixel Art",
+                      "href": "/docs/user-guide/skills/optional/creative/creative-pixel-art",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "devops",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "Inference Sh Cli",
+                      "href": "/docs/user-guide/skills/optional/devops/devops-cli",
+                      "level": 5
+                    },
+                    {
+                      "title": "Docker Management",
+                      "href": "/docs/user-guide/skills/optional/devops/devops-docker-management",
+                      "level": 5
+                    },
+                    {
+                      "title": "Hermes S6 Container Supervision",
+                      "href": "/docs/user-guide/skills/optional/devops/devops-hermes-s6-container-supervision",
+                      "level": 5
+                    },
+                    {
+                      "title": "Pinggy Tunnel",
+                      "href": "/docs/user-guide/skills/optional/devops/devops-pinggy-tunnel",
+                      "level": 5
+                    },
+                    {
+                      "title": "Watchers",
+                      "href": "/docs/user-guide/skills/optional/devops/devops-watchers",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "dogfood",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "Adversarial Ux Test",
+                      "href": "/docs/user-guide/skills/optional/dogfood/dogfood-adversarial-ux-test",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "email",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "Agentmail",
+                      "href": "/docs/user-guide/skills/optional/email/email-agentmail",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "finance",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "3 Statement Model",
+                      "href": "/docs/user-guide/skills/optional/finance/finance-3-statement-model",
+                      "level": 5
+                    },
+                    {
+                      "title": "Comps Analysis",
+                      "href": "/docs/user-guide/skills/optional/finance/finance-comps-analysis",
+                      "level": 5
+                    },
+                    {
+                      "title": "Dcf Model",
+                      "href": "/docs/user-guide/skills/optional/finance/finance-dcf-model",
+                      "level": 5
+                    },
+                    {
+                      "title": "Excel Author",
+                      "href": "/docs/user-guide/skills/optional/finance/finance-excel-author",
+                      "level": 5
+                    },
+                    {
+                      "title": "Lbo Model",
+                      "href": "/docs/user-guide/skills/optional/finance/finance-lbo-model",
+                      "level": 5
+                    },
+                    {
+                      "title": "Merger Model",
+                      "href": "/docs/user-guide/skills/optional/finance/finance-merger-model",
+                      "level": 5
+                    },
+                    {
+                      "title": "Pptx Author",
+                      "href": "/docs/user-guide/skills/optional/finance/finance-pptx-author",
+                      "level": 5
+                    },
+                    {
+                      "title": "Stocks",
+                      "href": "/docs/user-guide/skills/optional/finance/finance-stocks",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "gaming",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "Minecraft Modpack Server",
+                      "href": "/docs/user-guide/skills/optional/gaming/gaming-minecraft-modpack-server",
+                      "level": 5
+                    },
+                    {
+                      "title": "Pokemon Player",
+                      "href": "/docs/user-guide/skills/optional/gaming/gaming-pokemon-player",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "health",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "Fitness Nutrition",
+                      "href": "/docs/user-guide/skills/optional/health/health-fitness-nutrition",
+                      "level": 5
+                    },
+                    {
+                      "title": "Neuroskill Bci",
+                      "href": "/docs/user-guide/skills/optional/health/health-neuroskill-bci",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "mcp",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "Fastmcp",
+                      "href": "/docs/user-guide/skills/optional/mcp/mcp-fastmcp",
+                      "level": 5
+                    },
+                    {
+                      "title": "Mcporter",
+                      "href": "/docs/user-guide/skills/optional/mcp/mcp-mcporter",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "migration",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "Openclaw Migration",
+                      "href": "/docs/user-guide/skills/optional/migration/migration-openclaw-migration",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "mlops",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "Huggingface Accelerate",
+                      "href": "/docs/user-guide/skills/optional/mlops/mlops-accelerate",
+                      "level": 5
+                    },
+                    {
+                      "title": "Axolotl",
+                      "href": "/docs/user-guide/skills/optional/mlops/mlops-training-axolotl",
+                      "level": 5
+                    },
+                    {
+                      "title": "Chroma",
+                      "href": "/docs/user-guide/skills/optional/mlops/mlops-chroma",
+                      "level": 5
+                    },
+                    {
+                      "title": "Clip",
+                      "href": "/docs/user-guide/skills/optional/mlops/mlops-clip",
+                      "level": 5
+                    },
+                    {
+                      "title": "Dspy",
+                      "href": "/docs/user-guide/skills/optional/mlops/mlops-research-dspy",
+                      "level": 5
+                    },
+                    {
+                      "title": "Faiss",
+                      "href": "/docs/user-guide/skills/optional/mlops/mlops-faiss",
+                      "level": 5
+                    },
+                    {
+                      "title": "Optimizing Attention Flash",
+                      "href": "/docs/user-guide/skills/optional/mlops/mlops-flash-attention",
+                      "level": 5
+                    },
+                    {
+                      "title": "Guidance",
+                      "href": "/docs/user-guide/skills/optional/mlops/mlops-guidance",
+                      "level": 5
+                    },
+                    {
+                      "title": "Huggingface Tokenizers",
+                      "href": "/docs/user-guide/skills/optional/mlops/mlops-huggingface-tokenizers",
+                      "level": 5
+                    },
+                    {
+                      "title": "Instructor",
+                      "href": "/docs/user-guide/skills/optional/mlops/mlops-instructor",
+                      "level": 5
+                    },
+                    {
+                      "title": "Lambda Labs Gpu Cloud",
+                      "href": "/docs/user-guide/skills/optional/mlops/mlops-lambda-labs",
+                      "level": 5
+                    },
+                    {
+                      "title": "Llava",
+                      "href": "/docs/user-guide/skills/optional/mlops/mlops-llava",
+                      "level": 5
+                    },
+                    {
+                      "title": "Modal Serverless Gpu",
+                      "href": "/docs/user-guide/skills/optional/mlops/mlops-modal",
+                      "level": 5
+                    },
+                    {
+                      "title": "Nemo Curator",
+                      "href": "/docs/user-guide/skills/optional/mlops/mlops-nemo-curator",
+                      "level": 5
+                    },
+                    {
+                      "title": "Obliteratus",
+                      "href": "/docs/user-guide/skills/optional/mlops/mlops-obliteratus",
+                      "level": 5
+                    },
+                    {
+                      "title": "Outlines",
+                      "href": "/docs/user-guide/skills/optional/mlops/mlops-inference-outlines",
+                      "level": 5
+                    },
+                    {
+                      "title": "Peft Fine Tuning",
+                      "href": "/docs/user-guide/skills/optional/mlops/mlops-peft",
+                      "level": 5
+                    },
+                    {
+                      "title": "Pinecone",
+                      "href": "/docs/user-guide/skills/optional/mlops/mlops-pinecone",
+                      "level": 5
+                    },
+                    {
+                      "title": "Pytorch Fsdp",
+                      "href": "/docs/user-guide/skills/optional/mlops/mlops-pytorch-fsdp",
+                      "level": 5
+                    },
+                    {
+                      "title": "Pytorch Lightning",
+                      "href": "/docs/user-guide/skills/optional/mlops/mlops-pytorch-lightning",
+                      "level": 5
+                    },
+                    {
+                      "title": "Qdrant Vector Search",
+                      "href": "/docs/user-guide/skills/optional/mlops/mlops-qdrant",
+                      "level": 5
+                    },
+                    {
+                      "title": "Sparse Autoencoder Training",
+                      "href": "/docs/user-guide/skills/optional/mlops/mlops-saelens",
+                      "level": 5
+                    },
+                    {
+                      "title": "Simpo Training",
+                      "href": "/docs/user-guide/skills/optional/mlops/mlops-simpo",
+                      "level": 5
+                    },
+                    {
+                      "title": "Slime Rl Training",
+                      "href": "/docs/user-guide/skills/optional/mlops/mlops-slime",
+                      "level": 5
+                    },
+                    {
+                      "title": "Stable Diffusion Image Generation",
+                      "href": "/docs/user-guide/skills/optional/mlops/mlops-stable-diffusion",
+                      "level": 5
+                    },
+                    {
+                      "title": "Tensorrt Llm",
+                      "href": "/docs/user-guide/skills/optional/mlops/mlops-tensorrt-llm",
+                      "level": 5
+                    },
+                    {
+                      "title": "Distributed Llm Pretraining Torchtitan",
+                      "href": "/docs/user-guide/skills/optional/mlops/mlops-torchtitan",
+                      "level": 5
+                    },
+                    {
+                      "title": "Fine Tuning With Trl",
+                      "href": "/docs/user-guide/skills/optional/mlops/mlops-training-trl-fine-tuning",
+                      "level": 5
+                    },
+                    {
+                      "title": "Unsloth",
+                      "href": "/docs/user-guide/skills/optional/mlops/mlops-training-unsloth",
+                      "level": 5
+                    },
+                    {
+                      "title": "Whisper",
+                      "href": "/docs/user-guide/skills/optional/mlops/mlops-whisper",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "payments",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "Mpp Agent",
+                      "href": "/docs/user-guide/skills/optional/payments/payments-mpp-agent",
+                      "level": 5
+                    },
+                    {
+                      "title": "Stripe Link Cli",
+                      "href": "/docs/user-guide/skills/optional/payments/payments-stripe-link-cli",
+                      "level": 5
+                    },
+                    {
+                      "title": "Stripe Projects",
+                      "href": "/docs/user-guide/skills/optional/payments/payments-stripe-projects",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "productivity",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "Canvas",
+                      "href": "/docs/user-guide/skills/optional/productivity/productivity-canvas",
+                      "level": 5
+                    },
+                    {
+                      "title": "Here.Now",
+                      "href": "/docs/user-guide/skills/optional/productivity/productivity-here-now",
+                      "level": 5
+                    },
+                    {
+                      "title": "Memento Flashcards",
+                      "href": "/docs/user-guide/skills/optional/productivity/productivity-memento-flashcards",
+                      "level": 5
+                    },
+                    {
+                      "title": "Shop",
+                      "href": "/docs/user-guide/skills/optional/productivity/productivity-shop",
+                      "level": 5
+                    },
+                    {
+                      "title": "Shopify",
+                      "href": "/docs/user-guide/skills/optional/productivity/productivity-shopify",
+                      "level": 5
+                    },
+                    {
+                      "title": "Siyuan",
+                      "href": "/docs/user-guide/skills/optional/productivity/productivity-siyuan",
+                      "level": 5
+                    },
+                    {
+                      "title": "Telephony",
+                      "href": "/docs/user-guide/skills/optional/productivity/productivity-telephony",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "research",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "Bioinformatics",
+                      "href": "/docs/user-guide/skills/optional/research/research-bioinformatics",
+                      "level": 5
+                    },
+                    {
+                      "title": "Darwinian Evolver",
+                      "href": "/docs/user-guide/skills/optional/research/research-darwinian-evolver",
+                      "level": 5
+                    },
+                    {
+                      "title": "Domain Intel",
+                      "href": "/docs/user-guide/skills/optional/research/research-domain-intel",
+                      "level": 5
+                    },
+                    {
+                      "title": "Drug Discovery",
+                      "href": "/docs/user-guide/skills/optional/research/research-drug-discovery",
+                      "level": 5
+                    },
+                    {
+                      "title": "Duckduckgo Search",
+                      "href": "/docs/user-guide/skills/optional/research/research-duckduckgo-search",
+                      "level": 5
+                    },
+                    {
+                      "title": "Gitnexus Explorer",
+                      "href": "/docs/user-guide/skills/optional/research/research-gitnexus-explorer",
+                      "level": 5
+                    },
+                    {
+                      "title": "Osint Investigation",
+                      "href": "/docs/user-guide/skills/optional/research/research-osint-investigation",
+                      "level": 5
+                    },
+                    {
+                      "title": "Parallel Cli",
+                      "href": "/docs/user-guide/skills/optional/research/research-parallel-cli",
+                      "level": 5
+                    },
+                    {
+                      "title": "Qmd",
+                      "href": "/docs/user-guide/skills/optional/research/research-qmd",
+                      "level": 5
+                    },
+                    {
+                      "title": "Scrapling",
+                      "href": "/docs/user-guide/skills/optional/research/research-scrapling",
+                      "level": 5
+                    },
+                    {
+                      "title": "Searxng Search",
+                      "href": "/docs/user-guide/skills/optional/research/research-searxng-search",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "security",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "1Password",
+                      "href": "/docs/user-guide/skills/optional/security/security-1password",
+                      "level": 5
+                    },
+                    {
+                      "title": "Godmode",
+                      "href": "/docs/user-guide/skills/optional/security/security-godmode",
+                      "level": 5
+                    },
+                    {
+                      "title": "Oss Forensics",
+                      "href": "/docs/user-guide/skills/optional/security/security-oss-forensics",
+                      "level": 5
+                    },
+                    {
+                      "title": "Sherlock",
+                      "href": "/docs/user-guide/skills/optional/security/security-sherlock",
+                      "level": 5
+                    },
+                    {
+                      "title": "Web Pentest",
+                      "href": "/docs/user-guide/skills/optional/security/security-web-pentest",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "software-development",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "Code Wiki",
+                      "href": "/docs/user-guide/skills/optional/software-development/software-development-code-wiki",
+                      "level": 5
+                    },
+                    {
+                      "title": "Rest Graphql Debug",
+                      "href": "/docs/user-guide/skills/optional/software-development/software-development-rest-graphql-debug",
+                      "level": 5
+                    },
+                    {
+                      "title": "Subagent Driven Development",
+                      "href": "/docs/user-guide/skills/optional/software-development/software-development-subagent-driven-development",
+                      "level": 5
+                    }
+                  ]
+                },
+                {
+                  "title": "web-development",
+                  "href": "#",
+                  "level": 4,
+                  "children": [
+                    {
+                      "title": "Cloudflare Temporary Deploy",
+                      "href": "/docs/user-guide/skills/optional/web-development/web-development-cloudflare-temporary-deploy",
+                      "level": 5
+                    },
+                    {
+                      "title": "Page Agent",
+                      "href": "/docs/user-guide/skills/optional/web-development/web-development-page-agent",
+                      "level": 5
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Messaging Platforms",
+      "href": "#",
+      "level": 1,
+      "children": [
+        {
+          "title": "Messaging Gateway",
+          "href": "/docs/user-guide/messaging/",
+          "level": 2
+        },
+        {
+          "title": "Popular",
+          "href": "#",
+          "level": 2,
+          "children": [
+            {
+              "title": "Telegram",
+              "href": "/docs/user-guide/messaging/telegram",
+              "level": 3
+            },
+            {
+              "title": "Discord",
+              "href": "/docs/user-guide/messaging/discord",
+              "level": 3
+            },
+            {
+              "title": "Slack",
+              "href": "/docs/user-guide/messaging/slack",
+              "level": 3
+            },
+            {
+              "title": "WhatsApp",
+              "href": "/docs/user-guide/messaging/whatsapp",
+              "level": 3
+            },
+            {
+              "title": "WhatsApp Business (Cloud API)",
+              "href": "/docs/user-guide/messaging/whatsapp-cloud",
+              "level": 3
+            },
+            {
+              "title": "Signal",
+              "href": "/docs/user-guide/messaging/signal",
+              "level": 3
+            },
+            {
+              "title": "Email",
+              "href": "/docs/user-guide/messaging/email",
+              "level": 3
+            },
+            {
+              "title": "SMS (Twilio)",
+              "href": "/docs/user-guide/messaging/sms",
+              "level": 3
+            }
+          ]
+        },
+        {
+          "title": "Microsoft 365",
+          "href": "#",
+          "level": 2,
+          "children": [
+            {
+              "title": "Microsoft Teams",
+              "href": "/docs/user-guide/messaging/teams",
+              "level": 3
+            },
+            {
+              "title": "Teams Meetings",
+              "href": "/docs/user-guide/messaging/teams-meetings",
+              "level": 3
+            },
+            {
+              "title": "Microsoft Graph Webhook Listener",
+              "href": "/docs/user-guide/messaging/msgraph-webhook",
+              "level": 3
+            }
+          ]
+        },
+        {
+          "title": "Chinese platforms",
+          "href": "#",
+          "level": 2,
+          "children": [
+            {
+              "title": "DingTalk",
+              "href": "/docs/user-guide/messaging/dingtalk",
+              "level": 3
+            },
+            {
+              "title": "Feishu / Lark",
+              "href": "/docs/user-guide/messaging/feishu",
+              "level": 3
+            },
+            {
+              "title": "WeCom (Enterprise WeChat)",
+              "href": "/docs/user-guide/messaging/wecom",
+              "level": 3
+            },
+            {
+              "title": "WeCom Callback (Self-Built App)",
+              "href": "/docs/user-guide/messaging/wecom-callback",
+              "level": 3
+            },
+            {
+              "title": "Weixin (WeChat)",
+              "href": "/docs/user-guide/messaging/weixin",
+              "level": 3
+            },
+            {
+              "title": "QQ Bot",
+              "href": "/docs/user-guide/messaging/qqbot",
+              "level": 3
+            },
+            {
+              "title": "Yuanbao",
+              "href": "/docs/user-guide/messaging/yuanbao",
+              "level": 3
+            }
+          ]
+        },
+        {
+          "title": "Other",
+          "href": "#",
+          "level": 2,
+          "children": [
+            {
+              "title": "Home Assistant",
+              "href": "/docs/user-guide/messaging/homeassistant",
+              "level": 3
+            },
+            {
+              "title": "Mattermost",
+              "href": "/docs/user-guide/messaging/mattermost",
+              "level": 3
+            },
+            {
+              "title": "Matrix",
+              "href": "/docs/user-guide/messaging/matrix",
+              "level": 3
+            },
+            {
+              "title": "BlueBubbles (iMessage)",
+              "href": "/docs/user-guide/messaging/bluebubbles",
+              "level": 3
+            },
+            {
+              "title": "Photon iMessage",
+              "href": "/docs/user-guide/messaging/photon",
+              "level": 3
+            },
+            {
+              "title": "Google Chat",
+              "href": "/docs/user-guide/messaging/google_chat",
+              "level": 3
+            },
+            {
+              "title": "LINE",
+              "href": "/docs/user-guide/messaging/line",
+              "level": 3
+            },
+            {
+              "title": "SimpleX Chat",
+              "href": "/docs/user-guide/messaging/simplex",
+              "level": 3
+            },
+            {
+              "title": "ntfy",
+              "href": "/docs/user-guide/messaging/ntfy",
+              "level": 3
+            },
+            {
+              "title": "Open WebUI",
+              "href": "/docs/user-guide/messaging/open-webui",
+              "level": 3
+            },
+            {
+              "title": "Webhooks",
+              "href": "/docs/user-guide/messaging/webhooks",
+              "level": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Integrations",
+      "href": "#",
+      "level": 1,
+      "children": [
+        {
+          "title": "Overview",
+          "href": "/docs/integrations/",
+          "level": 2
+        },
+        {
+          "title": "Nous Portal",
+          "href": "/docs/integrations/nous-portal",
+          "level": 2
+        },
+        {
+          "title": "AI Providers",
+          "href": "/docs/integrations/providers",
+          "level": 2
+        },
+        {
+          "title": "MCP (Model Context Protocol)",
+          "href": "/docs/user-guide/features/mcp",
+          "level": 2
+        },
+        {
+          "title": "ACP Editor Integration",
+          "href": "/docs/user-guide/features/acp",
+          "level": 2
+        },
+        {
+          "title": "Provider Routing",
+          "href": "/docs/user-guide/features/provider-routing",
+          "level": 2
+        },
+        {
+          "title": "Fallback Providers",
+          "href": "/docs/user-guide/features/fallback-providers",
+          "level": 2
+        },
+        {
+          "title": "Credential Pools",
+          "href": "/docs/user-guide/features/credential-pools",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "title": "Guides & Tutorials",
+      "href": "#",
+      "level": 1,
+      "children": [
+        {
+          "title": "Run Nemotron 3 Ultra free in Hermes Agent",
+          "href": "/docs/guides/run-nemotron-3-ultra-free",
+          "level": 2
+        },
+        {
+          "title": "Run Hermes Agent with Nous Portal",
+          "href": "/docs/guides/run-hermes-with-nous-portal",
+          "level": 2
+        },
+        {
+          "title": "Tips & Best Practices",
+          "href": "/docs/guides/tips",
+          "level": 2
+        },
+        {
+          "title": "Run Local LLMs on Mac",
+          "href": "/docs/guides/local-llm-on-mac",
+          "level": 2
+        },
+        {
+          "title": "Tutorial: Daily Briefing Bot",
+          "href": "/docs/guides/daily-briefing-bot",
+          "level": 2
+        },
+        {
+          "title": "Tutorial: Team Telegram Assistant",
+          "href": "/docs/guides/team-telegram-assistant",
+          "level": 2
+        },
+        {
+          "title": "Using Hermes as a Python Library",
+          "href": "/docs/guides/python-library",
+          "level": 2
+        },
+        {
+          "title": "Use MCP with Hermes",
+          "href": "/docs/guides/use-mcp-with-hermes",
+          "level": 2
+        },
+        {
+          "title": "Use SOUL.md with Hermes",
+          "href": "/docs/guides/use-soul-with-hermes",
+          "level": 2
+        },
+        {
+          "title": "Use Voice Mode with Hermes",
+          "href": "/docs/guides/use-voice-mode-with-hermes",
+          "level": 2
+        },
+        {
+          "title": "Build a Plugin",
+          "href": "/docs/guides/build-a-hermes-plugin",
+          "level": 2
+        },
+        {
+          "title": "Automate Anything with Cron",
+          "href": "/docs/guides/automate-with-cron",
+          "level": 2
+        },
+        {
+          "title": "Script-Only Cron Jobs (No LLM)",
+          "href": "/docs/guides/cron-script-only",
+          "level": 2
+        },
+        {
+          "title": "Automation Blueprints",
+          "href": "/docs/guides/automation-blueprints",
+          "level": 2
+        },
+        {
+          "title": "Cron Troubleshooting",
+          "href": "/docs/guides/cron-troubleshooting",
+          "level": 2
+        },
+        {
+          "title": "Working with Skills",
+          "href": "/docs/guides/work-with-skills",
+          "level": 2
+        },
+        {
+          "title": "Delegation & Parallel Work",
+          "href": "/docs/guides/delegation-patterns",
+          "level": 2
+        },
+        {
+          "title": "Tutorial: GitHub PR Review Agent",
+          "href": "/docs/guides/github-pr-review-agent",
+          "level": 2
+        },
+        {
+          "title": "GitHub PR Reviews via Webhook",
+          "href": "/docs/guides/webhook-github-pr-review",
+          "level": 2
+        },
+        {
+          "title": "Migrate from OpenClaw",
+          "href": "/docs/guides/migrate-from-openclaw",
+          "level": 2
+        },
+        {
+          "title": "AWS Bedrock",
+          "href": "/docs/guides/aws-bedrock",
+          "level": 2
+        },
+        {
+          "title": "Microsoft Foundry",
+          "href": "/docs/guides/azure-foundry",
+          "level": 2
+        },
+        {
+          "title": "xAI Grok OAuth (SuperGrok / X Premium+)",
+          "href": "/docs/guides/xai-grok-oauth",
+          "level": 2
+        },
+        {
+          "title": "OAuth over SSH / Remote Hosts",
+          "href": "/docs/guides/oauth-over-ssh",
+          "level": 2
+        },
+        {
+          "title": "Register a Microsoft Graph Application",
+          "href": "/docs/guides/microsoft-graph-app-registration",
+          "level": 2
+        },
+        {
+          "title": "Operate the Teams Meeting Pipeline",
+          "href": "/docs/guides/operate-teams-meeting-pipeline",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "title": "Developer Guide",
+      "href": "#",
+      "level": 1,
+      "children": [
+        {
+          "title": "Contributing",
+          "href": "/docs/developer-guide/contributing",
+          "level": 2
+        },
+        {
+          "title": "Architecture",
+          "href": "#",
+          "level": 2,
+          "children": [
+            {
+              "title": "Architecture",
+              "href": "/docs/developer-guide/architecture",
+              "level": 3
+            },
+            {
+              "title": "Agent Loop Internals",
+              "href": "/docs/developer-guide/agent-loop",
+              "level": 3
+            },
+            {
+              "title": "Prompt Assembly",
+              "href": "/docs/developer-guide/prompt-assembly",
+              "level": 3
+            },
+            {
+              "title": "Context Compression and Caching",
+              "href": "/docs/developer-guide/context-compression-and-caching",
+              "level": 3
+            },
+            {
+              "title": "Gateway Internals",
+              "href": "/docs/developer-guide/gateway-internals",
+              "level": 3
+            },
+            {
+              "title": "Session Storage",
+              "href": "/docs/developer-guide/session-storage",
+              "level": 3
+            },
+            {
+              "title": "Provider Runtime Resolution",
+              "href": "/docs/developer-guide/provider-runtime",
+              "level": 3
+            },
+            {
+              "title": "Programmatic Integration",
+              "href": "/docs/developer-guide/programmatic-integration",
+              "level": 3
+            }
+          ]
+        },
+        {
+          "title": "Extending",
+          "href": "#",
+          "level": 2,
+          "children": [
+            {
+              "title": "Adding Tools",
+              "href": "/docs/developer-guide/adding-tools",
+              "level": 3
+            },
+            {
+              "title": "Adding Providers",
+              "href": "/docs/developer-guide/adding-providers",
+              "level": 3
+            },
+            {
+              "title": "Adding a Platform Adapter",
+              "href": "/docs/developer-guide/adding-platform-adapters",
+              "level": 3
+            },
+            {
+              "title": "Memory Provider Plugins",
+              "href": "/docs/developer-guide/memory-provider-plugin",
+              "level": 3
+            },
+            {
+              "title": "Context Engine Plugins",
+              "href": "/docs/developer-guide/context-engine-plugin",
+              "level": 3
+            },
+            {
+              "title": "Model Provider Plugins",
+              "href": "/docs/developer-guide/model-provider-plugin",
+              "level": 3
+            },
+            {
+              "title": "Image Generation Provider Plugins",
+              "href": "/docs/developer-guide/image-gen-provider-plugin",
+              "level": 3
+            },
+            {
+              "title": "Video Generation Provider Plugins",
+              "href": "/docs/developer-guide/video-gen-provider-plugin",
+              "level": 3
+            },
+            {
+              "title": "Web Search Provider Plugins",
+              "href": "/docs/developer-guide/web-search-provider-plugin",
+              "level": 3
+            },
+            {
+              "title": "Plugin LLM Access",
+              "href": "/docs/developer-guide/plugin-llm-access",
+              "level": 3
+            },
+            {
+              "title": "Creating Skills",
+              "href": "/docs/developer-guide/creating-skills",
+              "level": 3
+            },
+            {
+              "title": "Extending the CLI",
+              "href": "/docs/developer-guide/extending-the-cli",
+              "level": 3
+            }
+          ]
+        },
+        {
+          "title": "Internals",
+          "href": "#",
+          "level": 2,
+          "children": [
+            {
+              "title": "Tools Runtime",
+              "href": "/docs/developer-guide/tools-runtime",
+              "level": 3
+            },
+            {
+              "title": "Browser CDP Supervisor",
+              "href": "/docs/developer-guide/browser-supervisor",
+              "level": 3
+            },
+            {
+              "title": "ACP Internals",
+              "href": "/docs/developer-guide/acp-internals",
+              "level": 3
+            },
+            {
+              "title": "Cron Internals",
+              "href": "/docs/developer-guide/cron-internals",
+              "level": 3
+            },
+            {
+              "title": "Trajectory Format",
+              "href": "/docs/developer-guide/trajectory-format",
+              "level": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Reference",
+      "href": "#",
+      "level": 1,
+      "children": [
+        {
+          "title": "Command Reference",
+          "href": "#",
+          "level": 2,
+          "children": [
+            {
+              "title": "CLI Commands Reference",
+              "href": "/docs/reference/cli-commands",
+              "level": 3
+            },
+            {
+              "title": "Slash Commands Reference",
+              "href": "/docs/reference/slash-commands",
+              "level": 3
+            },
+            {
+              "title": "Profile Commands Reference",
+              "href": "/docs/reference/profile-commands",
+              "level": 3
+            }
+          ]
+        },
+        {
+          "title": "Configuration Reference",
+          "href": "#",
+          "level": 2,
+          "children": [
+            {
+              "title": "Environment Variables",
+              "href": "/docs/reference/environment-variables",
+              "level": 3
+            },
+            {
+              "title": "MCP Config Reference",
+              "href": "/docs/reference/mcp-config-reference",
+              "level": 3
+            },
+            {
+              "title": "Model Catalog",
+              "href": "/docs/reference/model-catalog",
+              "level": 3
+            }
+          ]
+        },
+        {
+          "title": "Tools & Skills Reference",
+          "href": "#",
+          "level": 2,
+          "children": [
+            {
+              "title": "Built-in Tools Reference",
+              "href": "/docs/reference/tools-reference",
+              "level": 3
+            },
+            {
+              "title": "Toolsets Reference",
+              "href": "/docs/reference/toolsets-reference",
+              "level": 3
+            }
+          ]
+        },
+        {
+          "title": "FAQ & Troubleshooting",
+          "href": "/docs/reference/faq",
+          "level": 2
+        }
+      ]
+    }
+  ]
+}
