@@ -9,22 +9,25 @@ Three sequential steps, orchestrated by `run.bat`:
 | Step | Script | Description |
 |------|--------|-------------|
 | 1 | `step1_scrape_sidebar.py` | Uses Playwright to expand the Docusaurus sidebar, extracts the full navigation tree → `sidebar.json` + `sidebar.md` |
-| 2 | `step2_generate_pdfs.py` | Visits each doc page, applies DOM manipulation (hide nav/sidebar/footer, expand tabs, fix images), exports each page as individual PDF → `temp/pdfs/*.pdf` + cover PDF |
+| 2 | `step2_generate_pdfs.py` | Visits each doc page sequentially, applies DOM manipulation (hide nav/sidebar/footer, expand tabs, fix images), exports each page as individual PDF → `temp/pdfs/*.pdf` + cover PDF |
+| 2 (mt) | `step2_generate_pdfs_mt.py` | **Multi-threaded** version of step 2 — uses Playwright async API with `asyncio.Semaphore` to process pages concurrently. Defaults to CPU thread count; override with `--workers N` |
 | 3 | `step3_merge_pdfs.py` | Merges all individual PDFs with PyMuPDF, builds hierarchical TOC bookmarks from `sidebar.json` → `Output/HermesAgent-docs.pdf` |
 
 ## Usage
 
 ```bash
-# Run all steps
+# Run all steps (single-threaded step 2)
 run.bat
 
 # Run individual steps
 run.bat step1
-run.bat step2
+run.bat step2              # single-threaded
+run.bat step2-mt           # multi-threaded (uses all CPU threads)
+run.bat step2-mt 4         # multi-threaded with 4 workers
 run.bat step3
 ```
 
-Step 2 skips already-generated PDFs (checks file existence + non-zero size), so re-running resumes from where it left off.
+Step 2 (both versions) skips already-generated PDFs (checks file existence + non-zero size), so re-running resumes from where it left off.
 
 ## Setup
 
