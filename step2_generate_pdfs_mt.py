@@ -1,13 +1,18 @@
 #!/usr/bin/env python3
 """
-Step 2: Generate individual PDFs for each documentation page + a cover PDF.
+Step 2 (Async multi-page): Generate individual PDFs for each documentation page + a cover PDF.
 
 Reads sidebar.json, visits each page with Playwright, applies DOM manipulation
 (from the Node.js page-processor.js), and exports to PDF.
 
+Uses Playwright's async API with asyncio.Semaphore to process pages concurrently.
+
+Default concurrency = CPU thread count. Override with --workers N.
+
 Usage:
   source venv/Scripts/activate
-  python step2_generate_pdfs.py
+  python step2_generate_pdfs_mt.py              # uses all CPU threads
+  python step2_generate_pdfs_mt.py --workers 4  # limit to 4
 """
 
 import json
@@ -15,9 +20,11 @@ import os
 import sys
 import io
 import time
+import asyncio
+import argparse
 from datetime import datetime
 from pathlib import Path
-from playwright.sync_api import sync_playwright
+from playwright.async_api import async_playwright
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
@@ -25,9 +32,9 @@ BASE_URL = 'https://hermes-agent.nousresearch.com'
 ORIGIN = 'https://hermes-agent.nousresearch.com'
 
 # ============================================================
-# DOM manipulation script (translated from page-processor.js)
+# DOM manipulation script (identical to step2_generate_pdfs.py)
 # ============================================================
-DOM_MANIPULATE_JS = """
+DOM_MANIPULATE_JS = r"""
 () => {
   // 1. Navbar: hide completely
   document.querySelectorAll(
@@ -54,7 +61,7 @@ DOM_MANIPULATE_JS = """
     'aside[class*="docSidebarContainer"]',
     'aside[role="navigation"]',
     '#navbar-sidebar__backdrop',
-    '.sidebarViewport_aRkj',
+    '.sidebarViewport_aRGl',
     '.docSidebarContainer_YfHR',
     'nav#menu.thin-scrollbar',
     'UL.theme-doc-sidebar-menu',
@@ -447,94 +454,157 @@ def url_to_filename(url):
     return path.replace('/', '_').replace('?', '_').replace('#', '_').replace(' ', '_')[:150]
 
 
-def generate_cover_pdf(output_path, total_pages):
-    """Generate cover page PDF using Playwright."""
-    with sync_playwright() as pw:
-        browser = pw.chromium.launch(headless=True)
-        context = browser.new_context(viewport={'width': 794, 'height': 1123})
-        page = context.new_page()
-        page.set_content(generate_cover_html(total_pages), wait_until='domcontentloaded', timeout=10000)
-        page.wait_for_timeout(500)
-        page.pdf(
-            path=output_path,
-            format='A4',
-            print_background=True,
-            margin={'top': '0', 'right': '0', 'bottom': '0', 'left': '0'},
-        )
-        browser.close()
-    print(f'  Generated: {output_path}')
+# ============================================================
+# Progress display (single-threaded asyncio, no lock needed)
+# ============================================================
+class ProgressDisplay:
+    """Async-friendly progress tracker."""
+
+    def __init__(self, total):
+        self._done = 0
+        self._total = total
+        self._lock = asyncio.Lock()
+
+    async def record_and_print(self, idx, title, status_icon, detail=''):
+        async with self._lock:
+            self._done += 1
+            pct = self._done / self._total * 100
+            bar_len = 30
+            filled = int(bar_len * self._done / self._total)
+            bar = '█' * filled + '░' * (bar_len - filled)
+            title_short = title[:50]
+            line = f'  [{bar}] {pct:5.1f}%  {self._done:3d}/{self._total} | {status_icon} {title_short:<50s} {detail}'
+            print(line)
+            return self._done
+
+    def set_done(self, n):
+        """Set initial done count (for pre-skipped pages)."""
+        self._done = n
 
 
-def generate_page_pdf(browser, context, url, output_path):
-    """Generate a single page PDF with DOM manipulation."""
-    page = context.new_page()
+async def generate_cover_pdf_async(output_path, total_pages):
+    """Generate cover page PDF using Playwright async API."""
+    pw = await async_playwright().start()
     try:
-        try:
-            page.goto(url, wait_until='networkidle', timeout=60000)
-        except Exception:
-            pass  # Continue even on timeout
-        page.wait_for_timeout(3000)
-
-        # Check for 404
-        is_404 = page.evaluate('''() => {
-            var h1 = document.querySelector('h1');
-            return h1 && h1.textContent && (h1.textContent.includes('404') || h1.textContent.includes('Not Found'));
-        }''')
-        if is_404:
-            page.close()
-            return False
-
-        # Apply DOM manipulation
-        page.evaluate(DOM_MANIPULATE_JS)
-
-        # Wait for images - scroll to each image to trigger lazy-load
-        img_positions = page.evaluate('''() => {
-            return Array.from(document.querySelectorAll('img')).map(img => ({
-                y: img.getBoundingClientRect().y,
-            })).filter(img => img.y > 0);
-        }''')
-        img_positions.sort(key=lambda x: x['y'])
-
-        for img in img_positions:
-            y = img['y']
-            page.evaluate(f'() => window.scrollTo({{top: {y}, behavior: "auto"}})')
-            page.wait_for_timeout(500)
-
-        page.evaluate('() => window.scrollTo({top: 0, behavior: "auto"})')
-        page.wait_for_timeout(1000)
-
-        # Wait until all images loaded (max 15s)
-        for _ in range(30):
-            all_loaded = page.evaluate('''() => {
-                return Array.from(document.querySelectorAll('img')).every(
-                    img => img.complete && img.naturalWidth > 0
-                );
-            }''')
-            if all_loaded:
-                break
-            page.wait_for_timeout(500)
-
-        # Generate PDF
-        page.pdf(
+        browser = await pw.chromium.launch(headless=True)
+        context = await browser.new_context(viewport={'width': 794, 'height': 1123})
+        page = await context.new_page()
+        await page.set_content(generate_cover_html(total_pages), wait_until='domcontentloaded', timeout=10000)
+        await page.wait_for_timeout(500)
+        await page.pdf(
             path=output_path,
             format='A4',
             print_background=True,
             margin={'top': '0', 'right': '0', 'bottom': '0', 'left': '0'},
         )
+        await browser.close()
+        print(f'  Generated: {output_path}')
+    finally:
+        await pw.stop()
 
-        page.close()
-        return True
-    except Exception as e:
-        print(f'    Error: {e}')
+
+async def process_page_async(page_data, idx, total, pdfs_dir, progress, semaphore, browser):
+    """
+    Process a single page with concurrency control via semaphore.
+    Uses the shared browser instance — creates a new context+page per document.
+    Returns (status, title).
+    """
+    async with semaphore:
+        title = page_data['title']
+        href = page_data['href']
+        url = f'{ORIGIN}{href}'
+        filename = url_to_filename(url) + '.pdf'
+        output_path = pdfs_dir / filename
+
+        # Skip check
+        if output_path.exists() and output_path.stat().st_size > 0:
+            await progress.record_and_print(idx, title, '⏭', 'skipped')
+            return 'skipped'
+
+        context = await browser.new_context(
+            viewport={'width': 1280, 'height': 800},
+            user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+        )
+        page = await context.new_page()
         try:
-            page.close()
-        except Exception:
-            pass
-        return False
+            try:
+                await page.goto(url, wait_until='networkidle', timeout=60000)
+            except Exception:
+                pass
+            await page.wait_for_timeout(3000)
+
+            # Check for 404
+            is_404 = await page.evaluate('''() => {
+                var h1 = document.querySelector('h1');
+                return h1 && h1.textContent && (h1.textContent.includes('404') || h1.textContent.includes('Not Found'));
+            }''')
+            if is_404:
+                await page.close()
+                await context.close()
+                await progress.record_and_print(idx, title, '❌', '404')
+                return 'failed'
+
+            # Apply DOM manipulation
+            await page.evaluate(DOM_MANIPULATE_JS)
+
+            # Wait for images - scroll to each image to trigger lazy-load
+            img_positions = await page.evaluate('''() => {
+                return Array.from(document.querySelectorAll('img')).map(img => ({
+                    y: img.getBoundingClientRect().y,
+                })).filter(img => img.y > 0);
+            }''')
+            img_positions.sort(key=lambda x: x['y'])
+
+            for img in img_positions:
+                y = img['y']
+                await page.evaluate(f'() => window.scrollTo({{top: {y}, behavior: "auto"}})')
+                await page.wait_for_timeout(500)
+
+            await page.evaluate('() => window.scrollTo({top: 0, behavior: "auto"})')
+            await page.wait_for_timeout(1000)
+
+            # Wait until all images loaded (max 15s)
+            for _ in range(30):
+                all_loaded = await page.evaluate('''() => {
+                    return Array.from(document.querySelectorAll('img')).every(
+                        img => img.complete && img.naturalWidth > 0
+                    );
+                }''')
+                if all_loaded:
+                    break
+                await page.wait_for_timeout(500)
+
+            # Generate PDF
+            await page.pdf(
+                path=str(output_path),
+                format='A4',
+                print_background=True,
+                margin={'top': '0', 'right': '0', 'bottom': '0', 'left': '0'},
+            )
+
+            size_kb = output_path.stat().st_size / 1024 if output_path.exists() else 0
+            await page.close()
+            await context.close()
+            await progress.record_and_print(idx, title, '✓', f'{size_kb:>8.1f} KB')
+            return 'success'
+
+        except Exception as e:
+            err_msg = str(e)[:60]
+            await progress.record_and_print(idx, title, '✗', f'ERR: {err_msg}')
+            try:
+                await page.close()
+            except Exception:
+                pass
+            try:
+                await context.close()
+            except Exception:
+                pass
+            return 'failed'
 
 
-def main():
-    print('Step 2: Generating individual PDFs')
+async def main_async(num_workers):
+    """Main async entry point."""
+    print(f'Step 2 (async): Generating individual PDFs | {num_workers} workers (CPU: {os.cpu_count() or "?"})')
     print()
 
     # Load sidebar
@@ -555,54 +625,74 @@ def main():
     cover_path = cover_dir / 'Cover_Hermes_Agent.pdf'
     if not cover_path.exists():
         print('  Generating cover page...')
-        generate_cover_pdf(str(cover_path), total)
+        await generate_cover_pdf_async(str(cover_path), total)
     else:
         print('  Cover already exists, skipping.')
     print()
 
-    # Generate page PDFs
-    print('  Generating page PDFs...')
+    # Separate pages into skip vs. need-processing
+    pending = []
+    already_skipped = 0
+    for p in pages:
+        fname = url_to_filename(f'{ORIGIN}{p["href"]}') + '.pdf'
+        fpath = pdfs_dir / fname
+        if fpath.exists() and fpath.stat().st_size > 0:
+            already_skipped += 1
+        else:
+            pending.append(p)
+
+    print(f'  {already_skipped} pages already generated, {len(pending)} remaining')
     print()
 
-    with sync_playwright() as pw:
-        browser = pw.chromium.launch(headless=True)
-        context = browser.new_context(
-            viewport={'width': 1280, 'height': 800},
-            user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-        )
+    if not pending:
+        print('  All pages already generated. Nothing to do.')
+        return
 
-        success = 0
-        skipped = 0
-        failed = 0
+    progress = ProgressDisplay(total)
+    progress.set_done(already_skipped)
 
-        for idx, page_data in enumerate(pages, 1):
-            title = page_data['title']
-            href = page_data['href']
-            url = f'{ORIGIN}{href}'
-            filename = url_to_filename(url) + '.pdf'
-            output_path = pdfs_dir / filename
+    # Launch one browser, process pages concurrently with semaphore
+    pw = await async_playwright().start()
+    try:
+        browser = await pw.chromium.launch(headless=True)
+        semaphore = asyncio.Semaphore(num_workers)
 
-            if output_path.exists() and output_path.stat().st_size > 0:
-                skipped += 1
-                print(f'    [{idx:3d}/{total}] ⏭ Skip: {title}')
-                continue
+        tasks = []
+        for i, page_data in enumerate(pending):
+            orig_idx = pages.index(page_data) + 1
+            tasks.append(process_page_async(page_data, orig_idx, total, pdfs_dir, progress, semaphore, browser))
 
-            ok = generate_page_pdf(browser, context, url, str(output_path))
+        results = await asyncio.gather(*tasks, return_exceptions=True)
 
-            if ok:
-                size_kb = output_path.stat().st_size / 1024 if output_path.exists() else 0
-                print(f'    [{idx:3d}/{total}] {title:<50s} {size_kb:>8.1f} KB')
-                success += 1
-            else:
-                print(f'    [{idx:3d}/{total}] {title:<50s} FAILED')
-                failed += 1
+        await browser.close()
+    finally:
+        await pw.stop()
 
-        context.close()
-        browser.close()
+    # Tally results
+    success = already_skipped
+    failed = 0
+    for r in results:
+        if isinstance(r, Exception):
+            failed += 1
+        elif r == 'success':
+            success += 1
+        else:
+            failed += 1
 
+    skipped = already_skipped
     print()
-    print(f'  Summary: {success} generated, {skipped} skipped, {failed} failed')
+    print(f'  Summary: {success} generated (incl. skipped), {skipped} skipped, {failed} failed')
     print(f'  Output directory: {pdfs_dir}/')
+
+
+def main():
+    parser = argparse.ArgumentParser(description='Generate individual PDFs for each documentation page (async multi-page).')
+    parser.add_argument('--workers', type=int, default=None,
+                        help='Number of concurrent workers. Defaults to CPU count (%d on this machine).' % (os.cpu_count() or 4))
+    args = parser.parse_args()
+
+    num_workers = args.workers if args.workers else (os.cpu_count() or 4)
+    asyncio.run(main_async(num_workers))
 
 
 if __name__ == '__main__':
